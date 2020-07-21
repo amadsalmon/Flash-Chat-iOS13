@@ -2,8 +2,8 @@
 //  RegisterViewController.swift
 //  Flash Chat iOS13
 //
-//  Created by Angela Yu on 21/10/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
+//  Created by Amad Salmon on 21/07/2020.
+//  Copyright © 2020 Amad Salmon. All rights reserved.
 //
 
 import UIKit
