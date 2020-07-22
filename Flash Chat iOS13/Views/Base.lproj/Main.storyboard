@@ -257,21 +257,32 @@
                                     <constraint firstItem="mZe-tG-Gm8" firstAttribute="leading" secondItem="7JT-7R-lw4" secondAttribute="leading" id="scf-xJ-Rnr"/>
                                 </constraints>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK8-SD-rTW">
+                                <rect key="frame" x="48" y="352" width="318" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1647058824" green="0.78039215689999997" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GK8-SD-rTW" firstAttribute="leading" secondItem="ibK-5F-w36" secondAttribute="leading" constant="48" id="02q-gP-cRZ"/>
                             <constraint firstItem="Mkq-A4-A98" firstAttribute="leading" secondItem="ibK-5F-w36" secondAttribute="leading" id="2C5-yn-42W"/>
+                            <constraint firstItem="ibK-5F-w36" firstAttribute="trailing" secondItem="GK8-SD-rTW" secondAttribute="trailing" constant="48" id="Ds4-5x-VRa"/>
                             <constraint firstItem="Mkq-A4-A98" firstAttribute="top" secondItem="ibK-5F-w36" secondAttribute="top" id="HHp-L5-4dK"/>
                             <constraint firstItem="Mkq-A4-A98" firstAttribute="trailing" secondItem="ibK-5F-w36" secondAttribute="trailing" id="b5A-nE-cpV"/>
                             <constraint firstItem="7JT-7R-lw4" firstAttribute="leading" secondItem="ibK-5F-w36" secondAttribute="leading" id="dag-ZR-y4c"/>
+                            <constraint firstItem="GK8-SD-rTW" firstAttribute="centerX" secondItem="NR3-PA-yDz" secondAttribute="centerX" id="gNn-ld-VoR"/>
                             <constraint firstItem="7JT-7R-lw4" firstAttribute="trailing" secondItem="ibK-5F-w36" secondAttribute="trailing" id="mpt-SH-Lld"/>
                             <constraint firstItem="7JT-7R-lw4" firstAttribute="top" secondItem="Mkq-A4-A98" secondAttribute="bottom" constant="-100" id="yL0-RW-8ad"/>
+                            <constraint firstItem="GK8-SD-rTW" firstAttribute="top" secondItem="7JT-7R-lw4" secondAttribute="bottom" constant="10" id="zUO-Vh-3Qq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ibK-5F-w36"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q43-tE-8RN"/>
                     <connections>
                         <outlet property="emailTextfield" destination="F21-w0-z4z" id="YUG-Hl-Rxj"/>
+                        <outlet property="errorLabel" destination="GK8-SD-rTW" id="wkf-vw-Xx8"/>
                         <outlet property="passwordTextfield" destination="abR-gz-opL" id="xCU-X2-hrx"/>
                         <segue destination="lwd-AH-u8E" kind="show" identifier="LoginToChat" id="iKg-Pd-l5G"/>
                     </connections>
@@ -382,7 +393,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="W5o-Pz-vTz"/>
+        <segue reference="iKg-Pd-l5G"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
