@@ -35,11 +35,11 @@ class ChatViewController: UIViewController {
     }
     
     func loadMessages() {
-        messages = []
-        db.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
+        db.collection(Constants.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
             if let e = error {
                 print("Issue retrieving data from Firestore: \(e)")
             } else {
+                self.messages = []
                 if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
@@ -50,8 +50,6 @@ class ChatViewController: UIViewController {
                                 self.tableView.reloadData()
                             }
                         }
-                        
-                        
                     }
                 }
             }
@@ -64,6 +62,7 @@ class ChatViewController: UIViewController {
                 if let e = error {
                     print("Issue saving data to Firestore: ", e)
                 } else {
+                    self.messageTextfield.text = ""
                     print("Successfully saved data to Firestore.")
                 }
             }
